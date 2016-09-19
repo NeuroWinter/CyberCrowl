@@ -186,7 +186,7 @@ def crowl(dirs, url, delay):
             if (ress.getheader('content-length') is not None):
                 size = int(ress.getheader('content-length'))
             else:
-                size = 0 
+                size = 0
         except (KeyError, ValueError, TypeError):
             size = len(ress.body)
         finally:
@@ -213,7 +213,7 @@ def crowl(dirs, url, delay):
 
         # save founded url log
         if save == 1:
-            found = url + d
+            found = url + '/' + d
             logfile.writelines(found + "\n")
 
         if delay > 0:
